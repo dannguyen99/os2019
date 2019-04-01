@@ -1,0 +1,44 @@
+* echo hello world
+hello world
+
+* passwd
+Changing password for dannguyen.
+(current) UNIX password:
+
+* date
+Mon Apr  1 10:20:37 DST 2019
+
+* hostname
+VAIO
+
+* arch
+x86_64
+
+* uname -a
+Linux VAIO 4.4.0-17763-Microsoft #379-Microsoft Wed Mar 06 19:16:00 PST 2019 x86_64 x86_64 x86_64 GNU/Linux
+
+* dmesg
+[    0.007084]  Microsoft 4.4.0-17763.379-Microsoft 4.4.35
+
+* uptime
+10:23:00 up 29 min,  0 users,  load average: 0.52, 0.58, 0.59
+
+* who am i
+
+* whoami
+dannguyen
+
+* who
+
+* id
+uid=1000(dannguyen) gid=1000(dannguyen) groups=1000(dannguyen),4(adm),20(dialout),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),108(lxd),114(netdev)
+
+* last
+wtmp begins Mon Apr  1 10:52:14 2019
+
+* finger
+
+* w
+ 10:28:29 up 35 min,  0 users,  load average: 0.52, 0.58, 0.59
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+
