@@ -37,6 +37,7 @@ uid=1000(dannguyen) gid=1000(dannguyen) groups=1000(dannguyen),4(adm),20(dialout
 wtmp begins Mon Apr  1 10:52:14 2019
 
 * finger
+No one logged on.
 
 * w
  10:28:29 up 35 min,  0 users,  load average: 0.52, 0.58, 0.59
