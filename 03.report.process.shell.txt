@@ -1,0 +1,70 @@
+* ps -a
+=> PID TTY          TIME CMD
+ 1037 tty1     00:02:10 Xorg
+ 1053 tty1     00:00:00 gnome-session-b
+ 1226 tty1     00:03:48 gnome-shell
+ 1311 tty1     00:00:21 ibus-daemon
+ 1315 tty1     00:00:00 ibus-dconf
+ 1317 tty1     00:00:00 ibus-x11
+ 1493 tty1     00:00:00 gsd-power
+ 1494 tty1     00:00:00 gsd-print-notif
+ 1497 tty1     00:00:00 gsd-rfkill
+ 1499 tty1     00:00:00 gsd-screensaver
+ 1504 tty1     00:00:00 gsd-sharing
+ 1511 tty1     00:00:00 gsd-smartcard
+ 1515 tty1     00:00:00 gsd-xsettings
+ 1525 tty1     00:00:00 gsd-sound
+ 1526 tty1     00:00:00 gsd-wacom
+ 1530 tty1     00:00:00 gsd-clipboard
+ 1534 tty1     00:00:00 gsd-a11y-settin
+ 1535 tty1     00:00:00 gsd-color
+ 1540 tty1     00:00:00 gsd-datetime
+ 1542 tty1     00:00:00 gsd-housekeepin
+ 1544 tty1     00:00:00 gsd-keyboard
+ 1549 tty1     00:00:00 gsd-media-keys
+ 1553 tty1     00:00:00 gsd-mouse
+ 1601 tty1     00:00:00 gsd-disk-utilit
+ 1608 tty1     00:00:01 nautilus-deskto
+ 1630 tty1     00:00:00 gsd-printer
+ 1666 tty1     00:00:06 ibus-engine-sim
+ 1770 tty1     00:02:39 chrome
+ 1894 tty1     00:00:00 chrome
+ 1896 tty1     00:00:00 chrome
+ 1925 tty1     00:01:55 chrome
+ 2164 tty1     00:00:00 ibus-engine-uni
+ 2231 tty1     00:00:00 chrome
+ 2268 tty1     00:00:07 chrome
+ 2308 tty1     00:00:00 chrome
+ 2324 tty1     00:00:00 update-notifier
+ 2327 tty1     00:00:04 gnome-software
+ 2420 pts/0    00:01:52 atom
+ 2434 pts/0    00:00:00 atom
+ 2497 pts/0    00:02:03 atom
+ 2591 pts/0    00:00:01 atom
+ 2632 tty1     00:00:00 deja-dup-monito
+ 4060 tty1     00:00:06 chrome
+ 4087 tty1     00:00:02 chrome
+ 4206 pts/0    00:00:00 wc
+ 5037 tty1     00:00:03 chrome
+ 5177 tty1     00:00:00 chrome
+ 5192 tty1     00:00:03 chrome
+ 5206 tty1     00:00:03 chrome
+ 5303 pts/0    00:00:00 ps
+
+* gnome-calculator
+=> start gnome-calculator
+
+* ps -a|grep "gnome-calculato" | awk '{print $1}'
+=> 6173
+
+* cat /proc/6173/status|grep State
+=> State:	S (sleeping)
+
+* kill -stop 6173
+=> [3]+  Stopped                 gnome-calculator
+
+* kill -cont 6173
+=> the gnome-calculator resume
+
+* kill -kill 6173
+=> the gnome-calculator is killed and cannot be resume
