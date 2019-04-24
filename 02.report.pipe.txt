@@ -25,13 +25,11 @@
 * wc -l etc/passwd
 => 42 /etc/passwd
 
-* free
-=>               total        used        free      shared  buff/cache   available
-Mem:        3944440     1641868      251948      255600     2050624     1760908
-Swap:       2097148           0     2097148
-#you can see the total memory is 3944440kb
+* free -h | grep Mem | awk '{print $2}'
+=> 3.8G
 
 * cat /proc/cpuinfo | grep -i "cpu cores" |wc -l
 => 4
+
 * find /home/dannguyen/Pictures  -name "*.jpg" | wc -l
 => 2
