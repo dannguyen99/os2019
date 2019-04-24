@@ -140,5 +140,5 @@ cache_alignment	: 64
 address sizes	: 39 bits physical, 48 bits virtual
 power management:
 
-* find /home/dannguyen/Pictures  -name "*.jpeg" | wc -l
+* find /home/dannguyen/Pictures  -name "*.jpg" | wc -l
 => 2
