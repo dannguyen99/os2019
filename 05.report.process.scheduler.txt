@@ -1,0 +1,12 @@
+systemd (1, #threads: 1)
+nr_switches                                  :                11419
+systemd-udevd (302, #threads: 1)
+nr_switches                                  :                  840
+systemd-resolve (644, #threads: 1)
+nr_switches                                  :                  365
+systemd-timesyn (646, #threads: 2)
+nr_switches                                  :                   30
+systemd-logind (847, #threads: 1)
+nr_switches                                  :                  989
+systemd-journal (278, #threads: 1)
+nr_switches                                  :                 1574
