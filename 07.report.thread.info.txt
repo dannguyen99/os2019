@@ -1,0 +1,9 @@
+ID=`ps -e | grep firefox | awk '{print $1}'`; ps -o nlwp $ID
+=> NLWP
+   1
+  38
+   1
+  21
+  11
+   1
+ 
