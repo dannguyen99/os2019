@@ -7,9 +7,9 @@
 
 
 typedef struct {
-  char type; // 0=fried chicken, 1=French fries
-  int amount; // pieces or weight
-  char unit; // 0=piece, 1=gram
+  char type;
+  int amount;
+  char unit;
 } item;
 
 item buffer[BUFFER_SIZE];
@@ -51,7 +51,7 @@ item* initItem(char type, int amount, char unit){
   return i;
 }
 
-//produce routine
+//produce routines
 void *produceThread(void *param){
   printf("This is produce thread\n");
   produce(initItem('1',3,'0'));
@@ -59,7 +59,7 @@ void *produceThread(void *param){
   produce(initItem('0',3,'0'));
 }
 
-//consume routine
+//consume routines
 void *consumeThread(void *param){
   printf("This is consume thread\n");
   consume();
@@ -74,6 +74,7 @@ int main(){
   if(pthread_create(&tid1, NULL, produceThread, NULL) != 0){
     perror("pthread_created() error");
   }
+  //second thread
   if(pthread_create(&tid2, NULL, consumeThread, NULL) != 0){
     perror("pthread_created() error");
   }
